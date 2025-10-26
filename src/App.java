@@ -1,5 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        try {
         int penultimo = 0;
         int ultimo = 1;
         
@@ -18,6 +19,10 @@ public class App {
                 ultimo = siguiente;
             }
         }
-
+        } catch (NumberFormatException e) {
+            System.out.println("Por favor, introduce un número válido.");
+        } catch (Exception e) {
+            System.out.println("Ha ocurrido un error inesperado.");
+        }
     }
 }
